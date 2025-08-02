@@ -1,0 +1,249 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    background-color: black;
+}
+
+.left-container,
+.right-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* .left-container::before,
+.right-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(1px) brightness(0.6);
+    z-index: 0;
+} */
+
+.left-container>*,
+.right-container>* {
+    position: relative;
+    z-index: 1;
+}
+
+.left-container {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-container {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Text Styling */
+.text-glass {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+}
+
+.city-name,
+.country-name,
+.clock,
+.date,
+.temperature {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Left Container Details */
+.location {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 2rem;
+    text-align: right;
+}
+
+.country-name {
+    font-size: 2rem;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    font-weight: 250;
+    align-items: center;
+}
+
+.clock {
+    font-size: 3rem;
+}
+
+.date {
+    font-size: 1.5rem;
+}
+
+.temperature {
+    font-size: 5rem;
+}
+
+/* Right Container Styles */
+.weather-icon {
+    width: 120px;
+    height: 120px;;
+    margin-top: 1rem;
+    image-rendering: crisp-edges;
+}
+
+.weather-type {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+hr {
+    width: 80%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1rem auto;
+}
+
+.info-box {
+    width: 85%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.info-city {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0.25rem 0;
+}
+
+.info-temp,
+.info-humidity,
+.info-visibility,
+.info-windspeed {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    padding: 0.25rem 0;
+    margin: 0 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        /* let content height grow */
+        overflow-y: auto;
+        /* enable vertical scroll */
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        height: 100vh;
+        min-height: 50vh;
+        /* ensure some vertical space */
+    }
+
+    .right-container {
+        padding: 1rem;
+    }
+
+    .location {
+        font-size: 2rem;
+        text-align: center;
+        margin: 3rem 1rem 1rem 1rem;
+    }
+
+    .country-name {
+        font-size: 1.2rem;
+    }
+
+    .time-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem;
+    }
+
+    .clock {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .date {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .temperature {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .weather-icon {
+        width: 90px;
+    }
+
+    .weather-type {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .info-box {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .info-city {
+        font-size: 1.2rem;
+    }
+
+    .info-temp,
+    .info-humidity,
+    .info-visibility,
+    .info-windspeed {
+        font-size: 1rem;
+    }
+
+    .text-glass {
+        padding: 0.75rem 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .searchBox {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
