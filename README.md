@@ -94,8 +94,8 @@ src/
 
 ## 🖼️ Preview
 
-![Poster](poster1.jpg)
-![Poster](poster2.jpg)
+![Poster1](poster1.png)
+![Poster2](poster2.png)
 
 ---
 
